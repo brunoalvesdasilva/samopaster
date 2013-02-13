@@ -1,0 +1,5 @@
+AddType application/x-httpd-php53 .php
+ 
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule !\.(js|ico|gif|jpg|png|css|htm)$ index.php [QSA,L]

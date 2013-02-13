@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- [METATAGS] -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+	<!-- [TITLE] -->
+    <title>SAMOPASTER - Sharing knowledge</title>
+    
+    <!-- [SHEETSTYLES] -->
+    <link href="Attachments/sheetstyles/bootstrap.css" rel="stylesheet">
+    <link href="Attachments/sheetstyles/config_min.css" rel="stylesheet">
+ 
+ 	<!-- [JAVASCRIPT] -->
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script type="text/javascript" src="Attachments/javascript/bootstrap.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="Attachments/javascript/jquery.validate.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("#frm_contact").validate();
+    });
+    </script>
+
+</head>
+
+    <body>
+    
+        <div id="container">
+        
+            <div class="navbar">
+                <div class="navbar-inner">
+                <ul class="nav nav-pills pull-right">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="active"><a href="contact.html">Contact</a></li>
+                </ul>
+                <a class="brand" href="home.html">SAMOPASTER</a>
+                </div>
+            </div>
+
+            <hr />
+
+            <?PHP if($samo_message){ ?>
+            <div class="alert alert-success">
+              <strong>Success</strong><br />
+               Your message was successfully sent. Thank you!
+            </div>
+            <?PHP } ?>
+
+            <form id="frm_contact" action="contact.html" method="post">
+                <div class='divInput'>
+                    <label>Your Name:</label>
+                    <input id="s_name" name="s_name" type="text" placeholder="Your Name" class="required">
+                <div>
+
+                <div class='divInput'>
+                    <label>Your E-Mail:</label>
+                    <input id="s_email" name="s_email" type="text" placeholder="Your E-Mail" class="required email">
+                <div>
+
+                <div class='divTextarea'>
+                    <label>Message:</label>
+                    <textarea id="s_message" name="s_message" class="required" minlength="5"></textarea>
+                </div>
+
+                <hr>
+
+                <div class='divButton'>
+                    <button type="submit" class="btn btn-primary submit" id="n_save" name="n_save">Send Message</button>
+                </div>
+                <div class='divFooter'>
+                    <p>&copy; SAMOPASTER 2012</p>
+                </div>
+
+            </form>
+
+    	</div>
+        
+        <script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-38177073-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
+        
+        
+    </body>
+
+</html>
