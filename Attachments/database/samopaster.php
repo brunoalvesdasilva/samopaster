@@ -11,10 +11,10 @@ function getConnection ()
 	static $PDO;
 	
 	// Informações de conexão
-	$data_host = "localhost";
-	$data_user = "siste204_samo";
-	$data_pass = "d23m02D@#M)@";
-	$data_base = "siste204_samopaster";
+	$data_host = "(Host)";
+	$data_user = "(User)";
+	$data_pass = "(Password)";
+	$data_base = "(Database)";
 
 	// String de Conexão
 	$string_pdo = "mysql:dbname=$data_base;host=$data_host;charset=utf8";
